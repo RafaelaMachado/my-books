@@ -1,0 +1,4 @@
+--color
+--drb
+--require spec_helper
+--tag ~integration:dangerous
