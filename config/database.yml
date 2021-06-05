@@ -1,22 +1,8 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: password
-  port: 5432
-  host: db
-
 development:
-  <<: *default
-  database: zygo_books_development
+  url: <%= ENV['DATABASE_URL'].gsub('?', '_development?') %>
 
 test:
-  <<: *default
-  database: zygo_books_test
+  url: <%= ENV['DATABASE_URL'].gsub('?', '_test?') %>
 
 production:
-  <<: *default
-  database: zygo_books_production
-  username: zygo_books
-  password: <%= ENV['ZYGO_BOOKS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'].gsub('?', '_production') %>
