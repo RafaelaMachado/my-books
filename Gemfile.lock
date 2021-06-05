@@ -66,6 +66,7 @@ GEM
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
+    bcrypt (3.1.16)
     better_errors (2.9.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -94,6 +95,12 @@ GEM
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
     debug_inspector (1.1.0)
+    devise (4.8.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.4.4)
     docile (1.4.0)
     erubi (1.10.0)
@@ -129,6 +136,7 @@ GEM
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     parallel (1.20.1)
     parser (3.0.1.1)
       ast (~> 2.4.1)
@@ -185,6 +193,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.1.1)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rexml (3.2.5)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
@@ -262,6 +273,8 @@ GEM
     tzinfo-data (1.2021.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.0.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -294,6 +307,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   database_cleaner-active_record
+  devise
   factory_bot_rails
   faker
   jbuilder (~> 2.7)

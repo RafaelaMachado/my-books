@@ -23,7 +23,7 @@ RUN bundle install
 
 COPY package.json yarn.lock ./
 RUN set -ex; \
-  yarn install --frozen-lockfile --production; \
+  yarn install --frozen-lockfile; \
   yarn cache clean;
 
 ENV BUNDLE_FORCE_RUBY_PLATFORM=1
