@@ -1,0 +1,9 @@
+<% authors.each do |author| %>
+  <tr>
+    <th><%= author.name %></th>
+    <td>
+      <%= link_to "Edit", edit_admin_author_path(author) %>
+      <%= link_to "Destroy", admin_author_path(author), method: :delete, data: { confirm: "Are you sure?" } %>
+    </td>
+  </tr>
+<% end %>
