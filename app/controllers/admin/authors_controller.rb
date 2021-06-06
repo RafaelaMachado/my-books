@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Admin
   class AuthorsController < BaseController
     before_action :set_author, only: %i[edit update destroy]
@@ -5,7 +7,7 @@ module Admin
     def index
       @search = Author.ransack(params[:q])
       @authors = @search.result
-      
+
       respond_with(@authors)
     end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
 
@@ -5,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'home#index'
-    resources :authors 
+    resources :authors
     resources :books
   end
 end

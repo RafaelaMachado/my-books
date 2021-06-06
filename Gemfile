@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -5,9 +7,9 @@ ruby '2.7.2'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
-gem 'friendly_id', '~> 5.4.0'
-gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
+gem 'devise-i18n'
+gem 'friendly_id', '~> 5.4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'

@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Admin
   class BooksController < BaseController
     before_action :set_book, only: %i[edit update destroy]
-    
+
     def index
       @search = Book.ransack(params[:q])
       @books = @search.result
