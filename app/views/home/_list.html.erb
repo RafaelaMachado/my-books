@@ -1,0 +1,15 @@
+<% @books.each do |book| %>
+  <tr>
+    <td><%= image_tag(book.image, :size => '80') %></td>
+    <th><%= book.title %></th>
+    <td><%= book.description %></td>
+    <td><%= book.author.name %></td>
+    <td>
+      <% if user_signed_in? %>
+        <%= link_to "Edit", edit_admin_book_path(book) %>
+        <%= link_to "Destroy", admin_book_path(book), method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
+    </td>
+  </tr>
+<% end %>
+
