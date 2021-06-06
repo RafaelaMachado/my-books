@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="p-5 mb-4 bg-light rounded-3 text-center mt-5">
+      <%= search_form_for(@search, url: admin_books_path, method: :get, class: 'row g-3') do |f| %>
+      <div class="col-10">
+        <%= f.search_field :title_or_description_cont, placeholder: "Search Books by name, description ou author", class: 'form-control m-2' %>
+      </div>
+      <div class="col-2">
+        <%= submit_tag "Search 🔍", class: 'btn btn-primary m-2' %>
+      </div>
+    <% end %>
+  </div>
+
+  <div id="booksTab">
+    <table class="table table-sm table-responsive">
+      <thead>
+        <tr>
+          <th class="col-2">#</th>
+          <th><%= sort_link @search, :title, "Title" %></th>
+          <th><%= sort_link @search, :description, "Description" %></th>
+          <th>Author</th>
+          <th class="col-2">#</th>
+        </tr>
+      </thead>
+      <tbody id="booksList">
+        <%= render 'list', authors: @authors %>
+      </tbody>
+    </table>
+  </div>
+  <div class="actions">
+    <%= link_to "New Book", new_admin_book_path, class: 'btn btn-primary m-2' %>
+  </div>
+  <hr>
+</div>

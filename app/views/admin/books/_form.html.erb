@@ -1,0 +1,29 @@
+<section class="col-8 offset-2 col-sm-6 offset-sm-3">
+  <%= form_with model: [:admin, @book] do |form| %>
+    <div class="field">
+      <%= form.label :title %><br />
+      <%= form.text_field :title, class: 'form-control m-2'  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :description %><br />
+      <%= form.text_field :description, class: 'form-control m-2'  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :image %><br />
+      <%= form.url_field :image, class: 'form-control m-2'  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :author_id %><br />
+
+      <%= form.select(:author_id, Author.all.collect { |p| [ p.name, p.id ] } , {}, { :class => 'form-control m-2' }) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Submit', class: 'btn btn-primary m-2' %>
+    </div>
+  <% end %>
+<hr>
+</section>
