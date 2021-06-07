@@ -4,7 +4,7 @@ Um sistema onde posso gerenciar minha própria biblioteca e disponibilizar uma l
 
 Esta aplicação foi feita usando Ruby on Rails 6 com algumas gems legais!
 
-Para verificar o aplicativo: (add link do heroku)
+Para verificar o aplicativo: https://my-books-zy.herokuapp.com/
 
 # Pré-requisitos
 
