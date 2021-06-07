@@ -2,9 +2,9 @@
 
 FactoryBot.define do
   factory :book do
-    title { 'MyString' }
-    description { 'MyString' }
+    title { 'O Guia' }
+    description { 'das galaxias' }
     image { 'MyString' }
-    author { nil }
+    author { FactoryBot.create(:author) }
   end
 end

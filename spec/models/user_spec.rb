@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user_response) { { email: "a@a.com", password: "password" } }
+  let(:user_response) { { email: Faker::Internet.email, password: "password" } }
 
   it 'has a valid factory' do
     user = User.new(user_response)
