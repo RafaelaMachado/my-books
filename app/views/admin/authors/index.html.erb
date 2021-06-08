@@ -1,11 +1,11 @@
 <div class="container">
   <div class="p-5 mb-4 bg-light rounded-3 text-center mt-5">
     <%= search_form_for(@search, url: admin_authors_path, method: :get, class: 'row g-3') do |f| %>
-      <div class="col-10">
+      <div class="col-md-10">
         <%= f.search_field :name_cont, placeholder: "Search authors by name", class: 'form-control m-2' %>
       </div>
-      <div class="col-2">
-        <%= submit_tag "Search 🔍", class: 'btn btn-primary m-2' %>
+      <div class="col-md-2">
+        <%= submit_tag "🔍", class: 'btn btn-primary m-2' %>
       </div>
     <% end %>
   </div>
