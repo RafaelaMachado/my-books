@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   namespace :admin do
-    root to: 'home#index'
+    root to: 'books#index'
     resources :authors
     resources :books
   end

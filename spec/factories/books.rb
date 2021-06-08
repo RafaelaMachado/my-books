@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :book do
     title { 'O Guia' }
     description { 'das galaxias' }
-    image { 'MyString' }
+    image { Faker::Avatar.image }
     author { FactoryBot.create(:author) }
   end
 end

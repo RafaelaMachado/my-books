@@ -1,6 +1,6 @@
 <% @books.each do |book| %>
   <tr>
-    <td><%= image_tag(book.image, :size => '80') %></td>
+    <td><img src=<%= (book.image) %> width=90/></td>
     <th><%= book.title %></th>
     <td><%= book.description %></td>
     <td><%= book.author.name %></td>
@@ -12,4 +12,3 @@
     </td>
   </tr>
 <% end %>
-
