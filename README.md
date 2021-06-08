@@ -26,12 +26,21 @@ https://docs.docker.com/compose/install/
 Acesse o diretório em que o repositório foi clonado através do terminal e
 execute os comandos:
  - `docker-compose build` para compilar imagens, criar containers etc.
- - `docker-compose up` para instalar as `gemas`, criar banco de dados e inicializar
+ - `docker-compose up` para instalar as `gemas` e inicializar
  o servidor
+ 
+ - `docker-compose run web rails db:create` para criar banco de dados
+
+ - `docker-compose run web rails db:migrate` para migrar as tabelas do banco de dados
 
  ## Populando o banco de dados para os dados iniciais
 
  `docker-compose run --rm app bundle exec rails db:seed`
+
+ ## Executando os testes automatizados
+ 
+ `docker-compose run web rails db:test:prepare`
+ `docker-compose run web rspec `
 
 ### Iniciando e finalizando containers
 Para inicializar execute o comando `docker-compose start` e
