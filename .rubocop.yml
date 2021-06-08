@@ -8,9 +8,17 @@ AllCops:
    - 'bin/**/*'
    - 'db/**/*'
    - 'config/**/*'
+   - 'node_modules/**/*'
 
 Style/Documentation:
   Enabled: false
 
 Metrics/LineLength:
  Max: 105
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - db/schema.rb
+    - config/environments/**
+    - spec/**/*

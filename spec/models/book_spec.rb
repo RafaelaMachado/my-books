@@ -3,15 +3,17 @@
 require 'rails_helper'
 
 RSpec.describe Book, type: :model do
-  let(:author_response) { { name: "Douglas Adams" } }
-  let(:book_response) { {
-    title: "O Guida dos Mochileiros das Galaxias",
-    description: "Arthur Dent é um homem normal Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "link"
-  } }
-  
+  let(:author_response) { { name: 'Douglas Adams' } }
+  let(:book_response) do
+    {
+      title: 'O Guida dos Mochileiros das Galaxias',
+      description: 'Arthur Dent é um homem normal Lorem ipsum dolor sit amet',
+      image: 'link'
+    }
+  end
+
   it 'has a valid factory' do
-	  book = Book.new(book_response)
+    book = Book.new(book_response)
 
     author = Author.new(author_response)
     book.author = author

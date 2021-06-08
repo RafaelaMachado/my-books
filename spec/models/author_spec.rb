@@ -3,10 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe Author, type: :model do
-  let(:author_response) { { name: "Douglas Adams" } }
+  let(:author_response) { { name: 'Douglas Adams' } }
 
   it 'has a valid factory' do
-	  author = Author.new(author_response)
+    author = Author.new(author_response)
 
     expect(author.save).to be(true)
   end

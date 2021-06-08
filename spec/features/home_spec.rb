@@ -19,7 +19,7 @@ feature 'Show home' do
   it 'published books for logged user' do
     FactoryBot.create(:book)
     user = FactoryBot.create(:user)
-    login_as(user, :scope => :user)
+    login_as(user, scope: :user)
 
     visit root_path
 
@@ -33,11 +33,11 @@ feature 'Show home' do
 
   it 'correct menu button for logged user' do
     item_selector = 'a.dropdown-item'
-    
+
     FactoryBot.create(:book)
-    
+
     user = FactoryBot.create(:user)
-    login_as(user, :scope => :user)
+    login_as(user, scope: :user)
 
     visit root_path
 
